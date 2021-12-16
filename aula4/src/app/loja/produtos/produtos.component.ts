@@ -20,11 +20,15 @@ export class ProdutosComponent implements OnInit {
   }
 
   abrirProduto(produto){
-    this.router.navigate(['/produto/',produto])
+    this.router.navigate(['/loja/produto/'+ produto])
   }
 
   voltarPrincipal(){
     this.router.navigate(['']);
+  }
+
+  logout(){
+    localStorage.removeItem('USER');
   }
 
 }
